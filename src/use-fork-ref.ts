@@ -9,7 +9,7 @@ export interface useForkRefFunction {
 const setRef = <T extends Element>(ref: AnyRef<T>, value: T) => {
   if (typeof ref === 'function') {
     ref(value)
-  } else {
+  } else if (typeof ref === 'object') {
     ref.current = value
   }
 }

@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+/index.d.ts
+/index.js
+*.pnp*
+*lock.json
+
+# testing
+/coverage
+*.test*
+
+# production
+/out
+/build
+/dist
+/types
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+*.log*
+
+# local env files
+*.env*

@@ -9,6 +9,7 @@ export const useMediaquery = (query: string) => {
 
   useLayoutEffect(() => {
     const mql = window.matchMedia(query)
+    setValue(mql.matches)
     const handleChange = (ev: MediaQueryListEvent) => {
       setValue(ev.matches)
     }

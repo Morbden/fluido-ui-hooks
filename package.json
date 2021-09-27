@@ -1,6 +1,6 @@
 {
   "name": "@fluido/ui-hooks",
-  "version": "0.5.2-beta.13",
+  "version": "0.5.2-beta.14",
   "license": "MIT",
   "private": false,
   "description": "A framework for create front-end easy and fast",
@@ -24,15 +24,15 @@
     "type": "git",
     "url": "https://github.com/Morbden/fluido-ui-hooks"
   },
-  "main": "common/index.js",
+  "main": "dist/index.js",
   "module": "esm/index.js",
-  "types": "common/index.d.js",
+  "types": "dist/index.d.js",
   "scripts": {
     "dev": "run-p dev:common dev:esm",
     "dev:common": "tsc -w",
     "dev:esm": "tsc --build tsconfig.esm.json -w",
     "build": "run-s clear build:common build:esm",
-    "clear": "rimraf common esm types",
+    "clear": "rimraf dist esm",
     "build:common": "tsc",
     "build:esm": "tsc --build tsconfig.esm.json",
     "pub": "npm publish --access public",

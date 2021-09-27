@@ -13,6 +13,8 @@
 /out
 /build
 /dist
+/common
+/esm
 /types
 
 # misc

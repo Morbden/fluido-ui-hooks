@@ -1,6 +1,6 @@
 {
   "name": "@fluido/ui-hooks",
-  "version": "0.5.3-beta.15",
+  "version": "0.5.3-beta.16",
   "license": "MIT",
   "private": false,
   "description": "A framework for create front-end easy and fast",
@@ -26,7 +26,6 @@
   },
   "main": "dist/index.js",
   "module": "esm/index.js",
-  "types": "dist/index.d.js",
   "scripts": {
     "dev": "run-p dev:common dev:esm",
     "dev:common": "tsc -w",

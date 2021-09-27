@@ -1,6 +1,13 @@
 import { useEffect, useRef } from 'react'
 
-export const useUpdateEffect = (cb: VoidFunction, dependencies: any[]) => {
+export interface UseUpdateEffectFunction {
+  (cb: VoidFunction, dependencies?: any[]): void
+}
+
+export const useUpdateEffect: UseUpdateEffectFunction = (
+  cb,
+  dependencies = [],
+) => {
   const firstUse = useRef(true)
   useEffect(() => {
     if (firstUse.current) {

@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react'
 
-export const useIsMounted = () => {
+export interface UseIsMountedFunction {
+  (): boolean
+}
+
+export const useIsMounted: UseIsMountedFunction = () => {
   const value = useRef(false)
   useEffect(() => {
     value.current = true
@@ -9,5 +13,5 @@ export const useIsMounted = () => {
     }
   }, [])
 
-  return value
+  return value.current
 }

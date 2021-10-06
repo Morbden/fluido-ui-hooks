@@ -6,7 +6,7 @@ export * from './use-debounce'
 export * from './use-fork-ref'
 export * from './use-interval'
 export * from './use-is-mounted'
-export * from './use-mediaquery'
+export * from './use-media-query'
 export * from './use-on-mount'
 export * from './use-state-array'
 export * from './use-state-debounce'
@@ -15,13 +15,9 @@ export * from './use-state-previous'
 export * from './use-timeout'
 export * from './use-timer'
 export * from './use-update-effect'
-export * from 'react-popper'
-export * from 'use-double-tap'
-
-import { useHotkeys } from 'react-hotkeys-hook'
-import useResizeObserver from 'use-resize-observer'
-
-export { useHotkeys, useResizeObserver }
+export * from './use-hotkeys'
+export * from './use-popper'
+export * from './use-double-tap'
 
 export interface TypedMap<T = any> {
   [key: string]: T

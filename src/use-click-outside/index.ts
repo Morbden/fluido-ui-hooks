@@ -6,7 +6,7 @@ import {
   useLayoutEffect,
   useRef,
 } from 'react'
-import { useForkRef, AnyRef } from './use-fork-ref'
+import { useForkRef, AnyRef } from '../use-fork-ref'
 
 export interface useClickOutsideFunction {
   <T extends Element>(

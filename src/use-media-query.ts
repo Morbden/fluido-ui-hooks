@@ -1,10 +1,10 @@
 import { useLayoutEffect, useState } from 'react'
 
-export interface UseMediaquery {
+export interface UseMediaQuery {
   (query: string): boolean
 }
 
-export const useMediaquery = (query: string) => {
+export const useMediaQuery = (query: string) => {
   const [value, setValue] = useState(false)
 
   useLayoutEffect(() => {

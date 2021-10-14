@@ -1,6 +1,9 @@
 import React, { useMemo } from 'react'
 
-export type AnyRef<T> = ((node: T) => void) | React.MutableRefObject<T>
+export type AnyRef<T> =
+  | ((node: T) => void)
+  | React.MutableRefObject<T>
+  | React.ForwardedRef<T>
 
 export interface useForkRefFunction {
   <T extends Element>(...refs: AnyRef<T>[]): (node: T) => void
@@ -9,7 +12,7 @@ export interface useForkRefFunction {
 const setRef = <T extends Element>(ref: AnyRef<T>, value: T) => {
   if (typeof ref === 'function') {
     ref(value)
-  } else if (typeof ref === 'object') {
+  } else if (ref && typeof ref === 'object') {
     ref.current = value
   }
 }

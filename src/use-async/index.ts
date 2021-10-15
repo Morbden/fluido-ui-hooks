@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export interface UseAsyncFunction {
-  <T = undefined>(cb: () => Promise<T>, dependencies: never[]): {
+  <T = undefined>(cb: () => Promise<T>, dependencies: any[]): {
     loading: boolean
     error?: any
     value?: T
@@ -10,7 +10,7 @@ export interface UseAsyncFunction {
 
 export const useAsync: UseAsyncFunction = <T = undefined>(
   cb: () => Promise<T>,
-  dependencies = [],
+  dependencies: any[] = [],
 ) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState()

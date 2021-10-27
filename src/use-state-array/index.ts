@@ -1,20 +1,20 @@
 import { useState } from 'react'
 
 export interface useStateArrayFunction {
-  <T = undefined>(initial: T[]): [
+  <T = undefined>(initial?: T[]): [
     T[],
     {
       push: (...values: T[]) => void
       remove: (start: number, size?: number) => void
       clear: (replace?: T[]) => void
       set: (index: number, value: T) => void
-      filter: (f: (value: T, index: number, list: T[]) => T[]) => void
+      filter: (f: (value: T, index: number, list: T[]) => boolean) => void
     },
   ]
 }
 
 export const useStateArray: useStateArrayFunction = (initial) => {
-  const [array, setArray] = useState(initial)
+  const [array, setArray] = useState(initial || [])
 
   return [
     array,
